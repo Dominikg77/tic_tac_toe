@@ -33,7 +33,7 @@ function draw() {
 
 function checkForWin() {
     let winner;
-    for (let i = 1; i < 8; i++) {
+    for (let i = 1; i <= 8; i++) {
         document.getElementById(`line-` + i).classList.remove(`d-none`);
         document.getElementById(`line-` + i).style.transform = `scaleX(0)`
     }
@@ -88,10 +88,10 @@ function restart() {
     document.getElementById(`game-over`).classList.add(`d-none`);
     document.getElementById(`restart-btn`).classList.add(`d-none`);
 
-    for (let i = 1; i < 8; i++) {
+    for (let i = 1; i <= 8; i++) {
         document.getElementById(`line-` + i).classList.add(`d-none`);
     }
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i <= 8; i++) {
         document.getElementById(`circle-` + i).classList.add(`d-none`);
         document.getElementById(`cross-` + i).classList.add(`d-none`);
     }
