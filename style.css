@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 103vh;
     overflow: hidden;
     font-family: 'Lato';
 }
@@ -129,21 +129,25 @@ table tr td:last-child {
     background-color: transparent;
 }
 
-.game-over {
+.container-game-over {
     position: absolute;
-    right: 0;
-    left: 230px;
-    width: 80%;
-    height: 770px;
-    border-radius: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    width: 70%;
+    height: 800px;
+}
+
+.game-over {
+    position: relative;
+    width: 100%;
+    height: 800px;
     object-fit: cover;
     z-index: 2;
     animation: zoomIn 225ms ease-in-out;
     -webkit-animation: zoomIn 225ms ease-in-out;
-    -webkit-border-radius: 150px;
-    -moz-border-radius: 150px;
-    -ms-border-radius: 150px;
-    -o-border-radius: 150px;
 }
 
 @keyframes zoomIn {
@@ -158,8 +162,8 @@ table tr td:last-child {
 }
 
 .restart-btn {
-    position: absolute;
-    bottom: 100px;
+    position: relative;
+    bottom: -50px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     background-color: #1C0B7F;
     z-index: 2;
@@ -177,4 +181,77 @@ table tr td:last-child {
 
 .restart-btn:hover {
     background-color: #1c0b7f9d;
+}
+
+@media screen and (max-width:1400px) {
+    .container-game-over {
+        width: 95%;
+    }
+    .game-over {
+        width: 80%;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .container-game-over {
+        width: 60%;
+        height: 800px;
+    }
+    .game-over {
+        width: 600px;
+        height: 400px;
+        padding-top: 170px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .restart-btn {
+        width: 200px;
+        height: 100px;
+        font-size: 24px;
+    }
+    .player-panel1 {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container-game-over {
+        width: 60%;
+        height: 800px;
+    }
+    .game-over {
+        width: 450px;
+        height: 300px;
+        padding-top: 160px;
+    }
+    .restart-btn {
+        width: 150px;
+        height: 75px;
+        font-size: 20px;
+    }
+    .player-panel1 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container-game-over {
+        width: 60%;
+        height: 800px;
+    }
+    .game-over {
+        width: 350px;
+        height: 200px;
+    }
+    .restart-btn {
+        width: 110px;
+        height: 55px;
+        font-size: 16px;
+    }
+    .player-panel1 {
+        font-size: 16px;
+        text-align: center;
+    }
 }
