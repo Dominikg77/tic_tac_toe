@@ -1,22 +1,29 @@
 body {
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    overflow: hidden;
+    font-family: 'Lato';
 }
 
 .player-panel1 {
     display: flex;
-    font-size: 32px;
+    font-size: 44px;
+    color: white;
+    font-weight: 900;
 }
 
 .player-panel1 div {
     display: flex;
     align-items: center;
-    margin-right: 16px;
-    margin-left: 16px;
-    margin-bottom: 32px;
+    margin-right: 24px;
+    margin-left: 24px;
+    margin-bottom: 44px;
 }
 
 .player-panel1 img {
@@ -26,7 +33,12 @@ body {
 }
 
 .player-inactive {
-    opacity: 0.5;
+    opacity: 0.4;
+    transition: all 225ms ease-in-out;
+    -webkit-transition: all 225ms ease-in-out;
+    -moz-transition: all 225ms ease-in-out;
+    -ms-transition: all 225ms ease-in-out;
+    -o-transition: all 225ms ease-in-out;
 }
 
 table {
@@ -78,7 +90,7 @@ table tr td:last-child {
 }
 
 .horizontal-line {
-    position: absolute;
+    position: relative;
     height: 15px;
     width: 350px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -90,10 +102,11 @@ table tr td:last-child {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     z-index: 1;
+    margin-left: 15px;
 }
 
 .make-vertical {
-    top: 540px;
+    top: 140px;
     transform: rotate(90deg);
     transform: scaleX(0.0);
     transition: transform 225ms ease-in-out;
@@ -107,14 +120,30 @@ table tr td:last-child {
     width: 400px;
 }
 
+.line {
+    margin-top: 50px;
+    position: absolute;
+    width: 399px;
+    height: 399px;
+    z-index: 1.5;
+    background-color: transparent;
+}
+
 .game-over {
     position: absolute;
     right: 0;
-    left: 0;
-    width: 100%;
+    left: 230px;
+    width: 80%;
+    height: 770px;
+    border-radius: 150px;
+    object-fit: cover;
     z-index: 2;
     animation: zoomIn 225ms ease-in-out;
     -webkit-animation: zoomIn 225ms ease-in-out;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    -ms-border-radius: 150px;
+    -o-border-radius: 150px;
 }
 
 @keyframes zoomIn {

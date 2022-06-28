@@ -6,27 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic tac toe</title>
+    <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 
 <body>
+
     <img class="game-over d-none" id="game-over" src="img/game-over.png">
     <button onclick="restart()" id="restart-btn" class="restart-btn d-none">Restart</button>
     <div class="player-panel1">
         <div class="player-inactive" id="player-1"><img src="img/circle.png"> Player 1</div>
         <div id="player-2"><img src="img/cross.png"> Player 2</div>
     </div>
-
-    <div id="line-1" class="horizontal-line" style="top: 400px"></div>
-    <div id="line-2" class="horizontal-line" style="top: 540px"></div>
-    <div id="line-3" class="horizontal-line" style="top: 680px"></div>
-    <div id="line-4" class="horizontal-line make-vertical " style="left: 575px"></div>
-    <div id="line-5" class="horizontal-line make-vertical " style="left: 720px"></div>
-    <div id="line-6" class="horizontal-line make-vertical " style="left: 855px"></div>
-    <div id="line-7" class="horizontal-line width-line " style="left: 220; top: 540px;  transform: rotate(45deg); transform: scaleX(0.0);"></div>
-    <div id="line-8" class="horizontal-line width-line " style="left: 220; top: 540px; transform: rotate(-45deg); transform: scaleX(0.0);"></div>
-
+    <div class="line">
+        <div id="line-1" class="horizontal-line" style="top: 50px"></div>
+        <div id="line-2" class="horizontal-line" style="top: 180px"></div>
+        <div id="line-3" class="horizontal-line" style="top: 300px"></div>
+        <div id="line-4" class="horizontal-line make-vertical " style="left: -130px"></div>
+        <div id="line-5" class="horizontal-line make-vertical " style="left: 10px"></div>
+        <div id="line-6" class="horizontal-line make-vertical " style="left: 150px"></div>
+        <div id="line-7" class="horizontal-line width-line " style="left: -10px; top: 100px;  transform: rotate(45deg); transform: scaleX(0.0);"></div>
+        <div id="line-8" class="horizontal-line width-line " style="left: -10px; top: 90px; transform: rotate(-45deg); transform: scaleX(0.0);"></div>
+    </div>
     <table>
         <tr>
             <td onclick="fillShape(0)">

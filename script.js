@@ -33,6 +33,10 @@ function draw() {
 
 function checkForWin() {
     let winner;
+    for (let i = 1; i < 8; i++) {
+        document.getElementById(`line-` + i).classList.remove(`d-none`);
+        document.getElementById(`line-` + i).style.transform = `scaleX(0)`
+    }
     //Horizontal && fields[0] am schluss überprüft noch mals das es sicher was drinn hat
     if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
         winner = fields[0];
